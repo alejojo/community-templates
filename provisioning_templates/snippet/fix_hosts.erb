@@ -5,7 +5,7 @@ model: ProvisioningTemplate
 snippet: true
 %>
 echo "<%= @host.shortname %>" > /etc/hostname
-hostname <%= @host.shortname %>
+hostname <%= @host %>
 cat > /etc/hosts << EOF
 <%# simple snippet to generate /etc/hosts when provisioning image based systems -%>
 127.0.0.1   <%= @host %> <%= @host.shortname %> localhost localhost.localdomain
